@@ -28,10 +28,9 @@ export class CheckboxComponent implements OnInit {
   @Output() change: EventEmitter<any> = new EventEmitter();
   _value: any;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   set value(value) {
     this._value = value;

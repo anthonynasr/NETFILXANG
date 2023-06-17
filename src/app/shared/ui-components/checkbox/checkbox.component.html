@@ -1,4 +1,9 @@
 <div fxFlex="100" fxLayout="row" fxLayoutAlign=" center">
-	<mat-checkbox [color]="'primary'" [disabled]="disabled" [(ngModel)]="value" (change)="changeVal(value)"></mat-checkbox>
-	<small>{{ description }}</small>
+  <mat-checkbox
+    [color]="'primary'"
+    [disabled]="disabled"
+    [(ngModel)]="value"
+    (change)="changeVal(value)"
+  ></mat-checkbox>
+  <small>{{ description }}</small>
 </div>

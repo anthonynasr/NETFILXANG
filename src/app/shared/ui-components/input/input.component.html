@@ -6,7 +6,10 @@
     placeholder="{{ placeholder }}"
     [value]="value"
     [(ngModel)]="value"
+    [min]="min"
+    [min]="max"
     [disabled]="disabled"
     (input)="changeVal(value)"
   />
+  <small>{{ description }}</small>
 </mat-form-field>

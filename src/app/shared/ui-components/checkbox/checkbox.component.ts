@@ -9,31 +9,29 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'nf-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss'],
+  selector: 'nf-checkbox',
+  templateUrl: './checkbox.component.html',
+  styleUrls: ['./checkbox.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => InputComponent),
+      useExisting: forwardRef(() => CheckboxComponent),
       multi: true,
     },
   ],
 })
-export class InputComponent implements OnInit, ControlValueAccessor {
+export class CheckboxComponent implements OnInit {
   @Input() label: string = 'Default label';
-  @Input() placeholder?: string;
   @Input() description?: string;
-  @Input() type: string = 'text';
-  @Input() min?: number;
-  @Input() max?: number;
   @Input() disabled: boolean = false;
 
   @Output() change: EventEmitter<any> = new EventEmitter();
   _value: any;
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   set value(value) {
     this._value = value;

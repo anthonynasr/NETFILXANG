@@ -4,12 +4,22 @@ import { FormComponent } from './components/form/form.component';
 import { InputComponent } from './ui-components/input/input.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-const components = [FormComponent, InputComponent];
+import { CheckboxComponent } from './ui-components/checkbox/checkbox.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+const components = [FormComponent, InputComponent, CheckboxComponent];
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, MatInputModule, MatCheckboxModule, MatIconModule, FormsModule],
-  exports: [components,InputComponent],
+  imports: [
+    CommonModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatIconModule,
+    FormsModule,
+    FlexLayoutModule,
+  ],
+  exports: [components],
 })
 export class SharedModule {}

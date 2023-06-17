@@ -11,12 +11,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ButtonComponent } from './ui-components/button/button.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListComponent } from './components/list/list.component';
+import { TableModule } from 'primeng/table';
 
 const components = [
   FormComponent,
   InputComponent,
   CheckboxComponent,
   ButtonComponent,
+  ListComponent
 ];
 @NgModule({
   declarations: [components],
@@ -28,7 +31,9 @@ const components = [
     FormsModule,
     FlexLayoutModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TableModule
+
   ],
   exports: [components, FlexLayoutModule],
 })

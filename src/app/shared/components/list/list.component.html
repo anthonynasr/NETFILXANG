@@ -1,0 +1,14 @@
+<div class="card">
+    <p-table [value]="data" [tableStyle]="{ 'min-width': '100rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th *ngFor="let item of header">{{item}}<p-sortIcon [field]="item"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-subItem>
+            <tr>
+                <td *ngFor="let item of header">{{ subItem[item] }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

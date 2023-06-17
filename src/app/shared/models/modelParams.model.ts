@@ -1,8 +1,10 @@
 export interface FormField {
   	defaultValue?: any;
 	name: string;
+	label?:string;
 	fieldType:string;
-	required: boolean;
+	type?:string;
+	required?: boolean;
 	datatype?:string;
 	min?:number;
 	max?:number;

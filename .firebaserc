@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "netflixbackend-e6dd2": {
+      "hosting": {
+        "NETFLIX": [
+          "netflixbackend-e6dd2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "netflixbackend-e6dd2"
+  }
+}

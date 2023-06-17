@@ -30,6 +30,6 @@ const components = [
     MatButtonModule,
     ReactiveFormsModule
   ],
-  exports: [components],
+  exports: [components, FlexLayoutModule],
 })
 export class SharedModule {}

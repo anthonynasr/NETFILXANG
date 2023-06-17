@@ -1,0 +1,18 @@
+.parent {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(0, 0, 255, 0.5),
+      rgba(255, 255, 0, 0.5)
+    ),
+    url("../../../assets/Images/backgrounds/LogosNetflix.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  .formContainer {
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}

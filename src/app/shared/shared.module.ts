@@ -8,8 +8,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { CheckboxComponent } from './ui-components/checkbox/checkbox.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ButtonComponent } from './ui-components/button/button.component';
+import {MatButtonModule} from '@angular/material/button';
 
-const components = [FormComponent, InputComponent, CheckboxComponent];
+const components = [
+  FormComponent,
+  InputComponent,
+  CheckboxComponent,
+  ButtonComponent,
+];
 @NgModule({
   declarations: [components],
   imports: [
@@ -19,6 +26,7 @@ const components = [FormComponent, InputComponent, CheckboxComponent];
     MatIconModule,
     FormsModule,
     FlexLayoutModule,
+    MatButtonModule
   ],
   exports: [components],
 })

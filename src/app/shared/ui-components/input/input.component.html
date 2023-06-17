@@ -1,4 +1,4 @@
-<mat-form-field class="example-form-field">
+<mat-form-field class="example-form-field" fxFlex="100">
   <mat-label>{{ label }}</mat-label>
   <input
     matInput
@@ -10,6 +10,7 @@
     [min]="max"
     [disabled]="disabled"
     (input)="changeVal(value)"
+    fxFlex="100"
   />
   <small>{{ description }}</small>
 </mat-form-field>

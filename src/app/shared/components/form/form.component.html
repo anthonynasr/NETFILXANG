@@ -1,1 +1,31 @@
-<p>form works!</p>
+<form
+  *ngIf="createdFormGroup"
+  fxLayout="column"
+  [formGroup]="createdFormGroup"
+  fxFlex="100"
+>
+  <div fxLayout="row" fxFlex="100" *ngFor="let field of fields">
+    <nf-input
+      *ngIf="field.fieldType === 'input'"
+      [formControlName]="field?.name"
+      [placeholder]="field?.placeholder"
+      [description]="field?.description"
+      [label] = "field?.label"
+      [type]="field?.datatype"
+      [min]="field?.min"
+      [max]="field?.max"
+      fxFlex="100"
+    ></nf-input>
+    <nf-checkbox
+      *ngIf="field.fieldType === 'checkbox'"
+      [formControlName]="field?.name"
+      [description]="field.description"
+      [label] = "field?.label"
+      fxFlex="100"
+    ></nf-checkbox>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxFlex="100" >
+  	<nf-button label = "Submit" fxFlex="100" (click) = "submitValues()"></nf-button>
+  </div>
+  
+</form>
